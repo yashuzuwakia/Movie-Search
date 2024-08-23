@@ -27,13 +27,18 @@ function App()
   const handletype = (value) =>
   {
     setType(value);
-    searchMovie(text,value);
+    setTimeout(() => {
+      searchMovie(text,value);
+    }, 500);
+    
   }
 
   const handleNameChange = (value) =>
   {
     setText(value);
-    searchMovie(value,type)
+    setTimeout(() => {
+      searchMovie(value,type)
+    }, 500);
   }
   return (
     <div className="screen">
