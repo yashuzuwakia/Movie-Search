@@ -54,7 +54,9 @@ function App()
               handleNameChange(event.target.value)
             }}
           />
-          <label for="looking">Looking For:</label>
+        </div>
+        <div className=''>
+        <h1>Looking For</h1>
           <select id="looking" name="looking" onChange={(event) =>
           {
               handletype(event.target.value)
