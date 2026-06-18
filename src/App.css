@@ -78,7 +78,7 @@ body::before {
 }
 
 input {
-  width: 450px;
+  width: min(420px, 100%);
   max-width: 90vw;
   height: 60px;
 
@@ -333,7 +333,12 @@ input::placeholder {
 .overview {
   margin-top: 12px;
   line-height: 1.6;
-  font-size: 0.9rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
 }
 
 /* ---------- MOBILE ---------- */
@@ -359,5 +364,188 @@ input::placeholder {
 
   .card {
     width: 220px;
+  }
+}
+
+/* ========================= */
+/* MOBILE PHONES */
+/* ========================= */
+
+@media screen and (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+
+  .searchBox {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input,
+  #looking {
+    width: 100%;
+  }
+
+  .featured {
+    width: 95%;
+    height: 250px;
+  }
+
+  .featuredContent {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .featuredContent h1 {
+    font-size: 1.5rem;
+  }
+
+  .featuredContent p {
+    display: none;
+  }
+
+  .movieList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .image {
+    height: 220px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .content h2 {
+    font-size: 0.9rem;
+  }
+
+  .content p {
+    font-size: 0.75rem;
+  }
+
+  .overview {
+    display: none;
+  }
+
+  .rating {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+/* ========================= */
+/* TABLETS */
+/* ========================= */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .featured {
+    width: 95%;
+    height: 400px;
+  }
+
+  .featuredContent h1 {
+    font-size: 2.8rem;
+  }
+
+  .featuredContent {
+    max-width: 600px;
+  }
+
+  .movieList {
+    gap: 25px;
+  }
+
+  .card {
+    width: 240px;
+  }
+}
+
+
+/* ========================= */
+/* SMALL LAPTOPS */
+/* ========================= */
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .featured {
+    height: 450px;
+  }
+
+  .featuredContent h1 {
+    font-size: 3rem;
+  }
+}
+
+
+/* ========================= */
+/* LARGE DESKTOPS */
+/* ========================= */
+
+@media screen and (min-width: 1600px) {
+
+  .container {
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+  }
+
+  .featured {
+    height: 600px;
+  }
+
+  .featuredContent h1 {
+    font-size: 5rem;
+  }
+
+  .card {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .movieList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .content h2 {
+    font-size: 0.8rem;
+  }
+
+  .content p {
+    font-size: 0.7rem;
   }
 }
