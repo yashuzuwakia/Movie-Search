@@ -58,6 +58,7 @@ body::before {
     #00ffd5
   );
 
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
